@@ -1,0 +1,34 @@
+﻿@model IList<DemoPartialView.Models.KhachHang>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Address
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var lineKhachHang in Model)
+        {
+            <tr>
+                <td>
+                    @lineKhachHang.id
+                </td>
+                <td>
+                    @lineKhachHang.name
+                </td>
+                <td>
+                    @lineKhachHang.address
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>

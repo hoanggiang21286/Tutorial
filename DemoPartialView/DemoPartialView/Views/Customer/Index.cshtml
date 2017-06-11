@@ -1,0 +1,39 @@
+﻿@model DemoPartialView.Models.KhachHang
+@{
+    Layout = null;
+}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#ShowList').click(function (e) {
+            debugger;
+            var id = $('input[name=khachangId]').val();
+            var name = $('input[name=tenkhachang]').val();
+            $.ajax({
+                url: '@Url.Action("GetKhachHang","Customer")',
+                data: {
+                    id: id ,
+                    name : name
+                },
+                dataType: "html",
+                type: "GET",
+                contentType: 'application/html; charset=utf-8',
+                success: function (data) {
+                    $('#CustomerListDiv').html(data);
+                },
+                error: function (e) {
+                    alert("Something went wrong." + e.message);
+                }
+            });
+        });
+    });
+</script>
+
+<h1>Main View</h1>
+<label for="customer_no">CustomerID:</label> <input type="text" id="customer_no" name="khachangId" required="required" />
+<br/>
+<label for="customer_name">CustomerID:</label> <input type="text" id="customer_name" name="tenkhachang"/>
+@*@Html.EditorFor(model => model.id, new { @id = "idKH" })*@
+<button id="ShowList">Display List Customer</button>
+
+<div id="CustomerListDiv"></div>

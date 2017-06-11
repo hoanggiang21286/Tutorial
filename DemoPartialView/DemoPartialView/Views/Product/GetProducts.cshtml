@@ -1,0 +1,16 @@
+﻿@model IList<DemoPartialView.Models.Product>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.Id</td>
+            <td>@m.Name</td>
+            <td>@m.Price</td>
+        </tr>
+    }
+</table>

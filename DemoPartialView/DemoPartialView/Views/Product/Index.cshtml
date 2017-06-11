@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h2>List of Product</h2>
+<div id="products"></div>
+<script type="text/javascript">
+    $(function () {
+        debugger;
+        $.ajax({
+            url: '@Url.Action("GetProducts","Product")',
+            dataType: "html",
+            type: "GET",
+            contentType: 'application/html; charset=utf-8',
+            success: function (data) {
+                $("#products").html(data);
+            },
+            error: function (xhr) {
+                alert(xhr);
+            }
+        });
+    });
+</script>
