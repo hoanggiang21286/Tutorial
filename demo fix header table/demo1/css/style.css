@@ -1,0 +1,87 @@
+@viewport{
+	min-zoom: 75%;
+}
+.header-page{
+	margin-top:20px;
+	margin-bottom: 30px;
+	min-width:1980px;
+}
+
+.table-demo {
+	width: 100%;
+	min-width:1980px;
+	bolder-collapse: collapse;
+}
+
+.table-demo thead, tbody, tr, td, th { 
+	display: block;
+ }
+
+tr:after {
+	content: ' ';
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+.table-demo  thead th {
+	height: 30px;
+	text-align: left;
+}
+
+.table-demo tbody {
+		table-layout:fixed;
+	display:block;
+	height: 500px;;
+	overflow-y: auto;
+}
+
+.table-demo thead {
+		table-layout:fixed;
+	color: white;
+	/* fallback */
+}
+
+
+.table-demo tbody td{
+	border: 1px solid grey;
+}
+
+.table-demo  thead th {
+		background-color: black;
+}
+
+.table-demo  tbody td, thead th {
+	width: 3.3%;
+	float: left;
+	min-width:70px;
+	border: 1px solid grey;
+}
+
+ .table-demo tr th:nth-child(1),
+ .table-demo tr td:nth-child(1){
+	float: left;
+	min-width:160px;
+	border: 1px solid blue;
+}
+
+ .table-demo tr th:nth-child(2),
+ .table-demo tr td:nth-child(2){
+	float: left;
+	min-width:100px;
+	border: 1px solid yellow;
+}
+
+ .table-demo tr th:nth-child(4),
+ .table-demo tr td:nth-child(4){
+	float: left;
+	min-width:100px;
+	border: 1px solid red;
+}
+
+ .table-demo tr th:nth-child(9),
+ .table-demo tr td:nth-child(9){
+	float: left;
+	min-width:90px;
+	border: 1px solid cyan;
+}
